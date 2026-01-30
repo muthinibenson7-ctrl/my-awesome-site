@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Sphere Commerce Company | Official Portal</title>
+    <title>Online Sphere Commerce Company | Service Portal</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -12,7 +12,6 @@
             --accent-teal: #64ffda;
             --text-light: #ccd6f6;
             --text-gray: #8892b0;
-            --white: #ffffff;
         }
 
         body {
@@ -21,149 +20,65 @@
             color: var(--text-light);
             margin: 0;
             padding: 0;
-            line-height: 1.8;
-        }
-
-        .wrapper {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 80px 24px;
+            line-height: 1.6;
             text-align: center;
         }
 
-        /* Header Section */
-        header { margin-bottom: 70px; }
-        h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3rem;
-            color: var(--accent-teal);
-            margin: 0;
-            text-transform: uppercase;
-        }
-        .mentor-subtitle {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.6rem;
-            color: var(--text-gray);
-            font-weight: 700;
-            letter-spacing: 6px;
-            margin-top: 10px;
+        .wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
         }
 
-        /* Mission & Vision Section */
-        .mv-section {
+        header { margin-bottom: 50px; }
+        h1 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; color: var(--accent-teal); margin: 0; text-transform: uppercase; }
+        .mentor-subtitle { font-family: 'Montserrat', sans-serif; font-size: 1.4rem; color: var(--text-gray); font-weight: 700; letter-spacing: 5px; margin-top: 10px; }
+
+        /* Mission & Vision Cards */
+        .mv-section { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 60px; }
+        .mv-card { background: rgba(100, 255, 218, 0.05); border: 1px solid var(--accent-teal); padding: 25px; border-radius: 12px; }
+
+        /* Service Grid */
+        .service-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 80px;
-        }
-        .mv-card {
-            background: rgba(100, 255, 218, 0.05);
-            border: 1px solid var(--accent-teal);
-            padding: 40px;
-            border-radius: 15px;
-        }
-        .mv-card h2 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--white);
-            margin-top: 0;
-            text-transform: uppercase;
-            font-size: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
         }
 
-        /* Business Modules Section */
-        .section-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2rem;
-            margin-bottom: 50px;
-            color: var(--white);
-            position: relative;
-            display: inline-block;
-        }
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: var(--accent-teal);
-            margin: 15px auto 0;
-        }
-
-        .business-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin-bottom: 80px;
-        }
-        .biz-card {
+        .service-card {
             background: var(--bg-card);
-            padding: 40px;
-            border-radius: 16px;
-            transition: all 0.3s ease;
+            padding: 25px;
+            border-radius: 12px;
             border: 1px solid rgba(100, 255, 218, 0.1);
-        }
-        .biz-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--accent-teal);
-            box-shadow: 0 20px 40px rgba(2, 12, 27, 0.8);
-        }
-        .biz-card h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            font-weight: 700;
+            transition: 0.3s;
         }
 
-        /* Business Colors */
-        .academic { color: #ff6b6b; }
-        .ecommerce { color: #4facfe; }
-        .marketing { color: #ffd93d; }
-        .tutoring { color: #6bffbc; }
-        .content { color: #ff9ff3; }
-        .virtual { color: #a29bfe; }
-        .webdev { color: #fab1a0; }
+        .service-card:hover { transform: translateY(-5px); border-color: var(--accent-teal); }
 
-        /* Activation Portal */
-        .activation-portal {
+        .service-card b { font-family: 'Montserrat', sans-serif; font-size: 1.1rem; display: block; margin-bottom: 8px; }
+
+        /* Diverse Colors for Services */
+        .c1 { color: #ff6b6b; } .c2 { color: #4facfe; } .c3 { color: #ffd93d; } .c4 { color: #6bffbc; }
+        .c5 { color: #ff9ff3; } .c6 { color: #a29bfe; } .c7 { color: #fab1a0; } .c8 { color: #00d2ff; }
+        .c9 { color: #ff9f43; } .c10 { color: #54a0ff; } .c11 { color: #5f27cd; } .c12 { color: #ff6b6b; }
+        .c13 { color: #1dd1a1; } .c14 { color: #feca57; }
+
+        /* Activation Box */
+        .activation-box {
             background: linear-gradient(145deg, #112240, #0a192f);
-            padding: 60px 40px;
-            border-radius: 24px;
-            border: 1px solid var(--accent-teal);
-            max-width: 800px;
+            border: 2px solid var(--accent-teal);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 700px;
             margin: 0 auto;
         }
-        .price-display {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--white);
-            margin: 20px 0;
-            display: block;
-        }
-        .phone-number {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--accent-teal);
-            background: rgba(100, 255, 218, 0.1);
-            padding: 10px 20px;
-            border-radius: 8px;
-            display: inline-block;
-            margin-bottom: 25px;
-            letter-spacing: 2px;
-        }
-        .cta-button {
-            background-color: var(--accent-teal);
-            color: var(--bg-dark);
-            border: none;
-            padding: 20px 50px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: 0.4s;
-            text-transform: uppercase;
-        }
-        .cta-button:hover { transform: scale(1.05); }
 
-        footer { margin-top: 100px; color: var(--text-gray); font-size: 0.9rem; }
+        .price { font-size: 2.5rem; font-weight: 800; color: #fff; margin: 15px 0; }
+        .phone { font-size: 2rem; color: var(--accent-teal); font-weight: 700; letter-spacing: 2px; display: block; margin: 15px 0; }
+        .btn { background: var(--accent-teal); color: var(--bg-dark); border: none; padding: 18px 40px; font-weight: 700; border-radius: 50px; cursor: pointer; text-transform: uppercase; }
+
+        footer { margin-top: 80px; padding-bottom: 40px; color: var(--text-gray); font-size: 0.8rem; }
     </style>
 </head>
 <body>
@@ -175,87 +90,48 @@
     </header>
 
     <div class="mv-section">
-        <div class="mv-card">
-            <h2>Our Mission</h2>
-            <p>To empower the digital generation in Kenya by providing high-performance e-commerce tools, professional academic support, and innovative learning systems that simplify wealth creation in the digital economy.</p>
-        </div>
-        <div class="mv-card">
-            <h2>Our Vision</h2>
-            <p>To be the leading multi-service digital ecosystem in East Africa, recognized for bridging the gap between digital skills and financial independence through automated, user-centric technology.</p>
-        </div>
+        [span_0](start_span)<div class="mv-card"><h2>Our Mission</h2><p>To empower the digital generation in Kenya through automated tools and professional mentorship[span_0](end_span).</p></div>
+        [span_1](start_span)<div class="mv-card"><h2>Our Vision</h2><p>To be East Africa’s premier ecosystem for digital skills and financial independence[span_1](end_span).</p></div>
     </div>
 
-    <h2 class="section-title">Professional Business Modules</h2>
+    <h2 style="margin-bottom: 40px; border-bottom: 2px solid var(--accent-teal); display: inline-block;">Our Professional Digital Services</h2>
 
-    <div class="business-grid">
-        <div class="biz-card">
-            <h3 class="academic">1. Academic Writing Services</h3>
-            <p>We offer professional research assistance and academic consulting. Our experts help students and professionals manage complex projects with quality, plagiarism-free results that meet global standards.</p>
-        </div>
-
-        <div class="biz-card">
-            <h3 class="ecommerce">2. E-Commerce Retail Hub</h3>
-            <p>A full-scale digital marketplace module. Sell physical products or digital downloads globally, with M-Pesa, PayPal, and card payments fully integrated for seamless local and international transactions.</p>
-        </div>
-
-        <div class="biz-card">
-            <h3 class="marketing">3. Digital Marketing Agency</h3>
-            <p>We help businesses dominate the digital space. Our services include SEO, high-conversion Social Media management, and professional ad campaigns designed to maximize reach and revenue.</p>
-        </div>
-
-        <div class="biz-card">
-            <h3 class="tutoring">4. Online Tutoring & LMS</h3>
-            <p>A specialized Learning Management System for educators. Host your own video courses, manage students, and track progress with our automated certification and enrollment platform.</p>
-        </div>
-
-        <div class="biz-card">
-            <h3 class="content">5. Content Creation Hub</h3>
-            <p>We manage professional Blogs, Vlogs, and Podcasts. This module focuses on content monetization through brand partnerships and affiliate marketing tailored for the African audience.</p>
-        </div>
-
-        <div class="biz-card">
-            <h3 class="virtual">6. Virtual Assistance Services</h3>
-            <p>Remote administrative and technical support for global executives. We provide trained virtual assistants to handle scheduling, data management, and customer support for international firms.</p>
-        </div>
-
-        <div class="biz-card">
-            <h3 class="webdev">7. Web Design & Hosting</h3>
-            <p>Establishing your digital identity with world-class websites. We build mobile-responsive, SEO-optimized sites and provide high-speed cloud hosting to ensure your business is always online.</p>
-        </div>
+    <div class="service-grid">
+        [span_2](start_span)<div class="service-card"><b class="c1">Academic & Essay Writing</b>Professional research and consulting for global standards[span_2](end_span).</div>
+        [span_3](start_span)<div class="service-card"><b class="c2">Data Entry</b>Efficient and accurate digital information management[span_3](end_span).</div>
+        [span_4](start_span)<div class="service-card"><b class="c3">Virtual Assistance (VA)</b>Remote administrative support for busy entrepreneurs[span_4](end_span).</div>
+        [span_5](start_span)<div class="service-card"><b class="c4">Transcription</b>Accurate audio and video to text conversion services[span_5](end_span).</div>
+        [span_6](start_span)<div class="service-card"><b class="c5">Translation Services</b>Professional language bridging for global communication[span_6](end_span).</div>
+        [span_7](start_span)<div class="service-card"><b class="c6">Content Writing & Blogging</b>SEO-optimized storytelling and brand building[span_7](end_span).</div>
+        [span_8](start_span)<div class="service-card"><b class="c7">Social Media Management</b>Growing your online presence and engagement[span_8](end_span).</div>
+        [span_9](start_span)<div class="service-card"><b class="c8">Graphic Design</b>High-impact visual communication and branding[span_9](end_span).</div>
+        [span_10](start_span)<div class="service-card"><b class="c9">Web Design & Development</b>Mobile-responsive and high-performance websites[span_10](end_span).</div>
+        [span_11](start_span)<div class="service-card"><b class="c10">Online Tutoring & Teaching</b>Specialized skill-based learning via our LMS[span_11](end_span).</div>
+        [span_12](start_span)<div class="service-card"><b class="c11">Proofreading & Editing</b>Polishing your professional and academic documents[span_12](end_span).</div>
+        [span_13](start_span)<div class="service-card"><b class="c12">Digital Marketing</b>Results-driven SEO and paid advertising[span_13](end_span).</div>
+        [span_14](start_span)<div class="service-card"><b class="c13">Affiliate Marketing</b>Monetizing digital content through partnerships[span_14](end_span).</div>
+        [span_15](start_span)<div class="service-card"><b class="c14">Copywriting</b>High-conversion text for sales and marketing[span_15](end_span).</div>
     </div>
 
-    <div class="activation-portal">
-        <h2>Instant System Activation</h2>
-        <p>To access your personal dashboard and begin managing your business, a one-time activation fee is required to verify your profile.</p>
-        
-        <span class="price-display">KSh 500</span>
-
-        <p style="margin-bottom: 25px;"><b>✓ AUTOMATION NOTICE:</b> Our system is fully integrated. Once your payment of <b>KSh 500</b> is confirmed via M-Pesa, the website will <b>automatically unlock</b> your account. You will receive instant access to all professional modules.</p>
-
-        <p>Send payment to official number:</p>
-        <div class="phone-number">0741723223</div>
-        <br>
-        <button class="cta-button" onclick="copyAndDirect()">Copy Number & Activate</button>
-
-        <p style="margin-top: 25px; font-size: 0.85rem; color: var(--text-gray);">
-            🔒 SSL Encrypted | ⚡ Instant Setup | ✅ Verified Portal
-        </p>
+    <div class="activation-box">
+        <h2>Automated Account Activation</h2>
+        [span_16](start_span)<p>A one-time fee is required to verify your profile and unlock your dashboard[span_16](end_span).</p>
+        <div class="price">KSh 500</div>
+        [span_17](start_span)<p><b>✓ NOTE:</b> Once payment is confirmed, your account will <b>automatically activate</b> for instant access[span_17](end_span).</p>
+        <span class="phone" id="num">0741723223</span>
+        <button class="btn" onclick="copyNum()">Copy Number & Pay</button>
     </div>
 
-    <footer>
-        &copy; 2026 Online Sphere Commerce Company. <br>
-        Partnered with Qaribuhub Solutions Ltd.
-    </footer>
+    <footer>&copy; 2026 Online Sphere Commerce Company. [span_18](start_span)All rights reserved[span_18](end_span).</footer>
 </div>
 
 <script>
-    function copyAndDirect() {
-        const number = "0741723223";
-        navigator.clipboard.writeText(number).then(() => {
-            alert("M-Pesa Number " + number + " copied to clipboard! \n\nPlease pay KSh 500. Your account will open automatically upon transaction confirmation.");
+    function copyNum() {
+        navigator.clipboard.writeText("0741723223").then(() => {
+            alert("Number 0741723223 copied! Pay KSh 500 for automatic account activation.");
         });
     }
 </script>
 
 </body>
-</html>v
+</html>
